@@ -1,0 +1,76 @@
+\documentclass[11pt, letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{float}
+\usepackage[super]{cite}
+\usepackage[font=footnotesize, labelfont=bf]{caption}
+
+
+\title{BIOL 502 Laboratory Report}
+\author{Hernandez, Leslie; Nguyen, Melissa; Rabinovich, Juan}
+\date{Fall, 2026}
+
+
+\begin{document}
+\maketitle
+\begin {center}
+    \textbf{Lab Instructor: Israel Hernández}\\
+    \textbf{Lab Day: Monday}
+\end{center}
+\vspace{0.1em}
+\begin{center}
+    \textbf{California State University, Channel Islands}
+\end{center}
+\vspace{1em}
+
+
+\section*{Methods}
+
+\subsection*{Plasmid Loading and Sequence Retrieval}
+Annotated vector sequences for $\text{pcDNA4/TO}$ (target expression vector) and $\text{pAcGFP1-C1}$ (fluorescent tagging vector) were imported from the SnapGene resource library \cite{snapgene}. The donor template containing the $\text{Rab5}$ gene ($\text{mRFP-Rab5}$) was obtained from Addgene and opened in SnapGene to review open reading frames (ORFs) and structural features \cite{addgene}.
+
+
+\subsection*{Primer Design and In Silico PCR Simulation}
+Custom primers were designed to amplify the $\text{Rab5}$ gene from the template. The forward primer incorporated at a $\text{BspEI}$ restriction site at the $5^{\prime}$ end starting at the initial leucine position to maintain proper reading frame alignment with $\text{AcGFP1}$ \cite{vib}. The reverse primer was mapped adjacent to the stop codon utilizing a downstream restriction site $\text{BamHI}$ \cite{vib}. Primer melting temperatures ($T_m$) were calculated within the $58.4\text{--}68.9^{\circ}\text{C}$ range using SnapGene's built-in thermodynamic calculator \cite{vib}. Polymerase chain reaction (PCR) and agarose gel electrophoresis were simulated, successfully verifying the expected 711 bp product.
+
+
+\subsection*{Restriction Cloning and Recombinant Assembly}
+Restriction digests were simulated on the amplified $\text{Rab5}$ fragment and on both vector backbones using $\text{BspEI}$ and $\text{BamHI}$ restriction enzymes \cite{vib}. In parallel, the $\text{Rab5}$ insert was ligated into the multiple cloning site (MCS) of $\text{pAcGFP1-C1}$ to generate the $\text{AcGFP-Rab5}$ fusion construct, and independently into the MCS of $\text{pcDNA4/TO}$ to generate the untagged $\text{Rab5}$ construct, each under the control of its respective CMV promoter \cite{vib}. These two constructs represent separate cloning outcomes rather than sequential steps of a single pathway. Plasmid construction pathways were validated via SnapGene's built-in history tracking tool \cite{vib}.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Figure1.pdf}
+    \caption{\textit{In silico} experimental design for the cloning of Rab5 and its fusion with AcGFP1. (a) Map of the empty pcDNA4/TO vector (5078 bp), showing the CMV promoter, tet operators, multiple cloning site (MCS), and the ampicillin (AmpR) and zeocin (BleoR) resistance markers. (b) Map of the empty pAcGFP1-C1 vector (4731 bp), carrying the AcGFP1 reporter gene under the CMV promoter. (c) Map of the mRFP-Rab5 donor plasmid (5319 bp), used as template for amplification of the Rab5 gene. (d) Linear map of the Rab5 amplicon (711 bp), showing the primer landing sites and the flanking BspEI and BamHI restriction sites. (e) Detail of the forward primer (PrimerRab5fw), showing the incorporated BspEI site and the translation of the Rab5 N-terminus. (f) Detail of the reverse primer (rab5rev), showing the incorporated BamHI site, the stop codon, and the translation of the Rab5 C-terminus. (g) Map of the pcDNA4TO-Rab5 construct (5733 bp), resulting from cloning of the untagged Rab5 gene into the MCS of pcDNA4/TO. (h) Map of the acGFP-Rab5 construct (5367 bp), resulting from the fusion of Rab5 with AcGFP1 in the MCS of pAcGFP1-C1. Both final constructs (g, h) were generated and validated independently using SnapGene's built-in history tracking tool.}
+    \label{fig:diseno}
+\end{figure}
+
+
+\section*{Results}
+
+\subsection*{Initial Plasmid Mapping and Vector Verification}
+
+In silico screening successfully mapped and verified the baseline configurations of the working vectors and templates (Figure~\ref{fig:diseno}). Analysis of the empty $\text{pcDNA4/TO}$ expression vector (5078 bp) confirmed the presence of the CMV promoter, tet operators, multiple cloning site (MCS), and resistance markers (Figure~\ref{fig:diseno}A). The $\text{pAcGFP1-C1}$ reporter plasmid (4731 bp) was mapped, establishing the baseline framework carrying the $\text{AcGFP1}$ gene under CMV control (Figure~\ref{fig:diseno}B). Additionally, the mRFP-Rab5 donor plasmid (5319 bp) was successfully loaded from Addgene to serve as the template source for the $\text{Rab5}$ gene (Figure~\ref{fig:diseno}C).
+
+
+\subsection*{In Silico PCR Amplification and Primer Binding}
+
+Polymerase chain reaction (PCR) simulation successfully amplified the target $\text{Rab5}$ sequence, yielding the expected 711 bp linear amplicon flanked by the designed restriction sites (Figure~\ref{fig:diseno}D). Sequence inspection verified that the forward primer ($\text{PrimerRab5fw}$) correctly incorporated the $\text{BspEI}$ restriction site at the $5^{\prime}$ start site while maintaining the correct reading frame for the N-terminus (Figure~\ref{fig:diseno}E). Similarly, the reverse primer ($\text{PrimerRab5rev}$) successfully incorporated the downstream $\text{BamHI}$ site adjacent to the stop codon for C-terminal alignment (Figure~\ref{fig:diseno}F).
+
+
+\subsection*{Recombinant Construct Assembly and Verification}
+
+Restriction cloning workflows successfully generated and validated the final expression constructs (Figure~\ref{fig:diseno}). Insertion of the untagged $\text{Rab5}$ gene into the MCS of $\text{pcDNA4/TO}$ yielded the final $\text{pcDNA4TO-Rab5}$ recombinant plasmid (5733 bp) (Figure~\ref{fig:diseno}G). Concurrently, restriction digest and ligation of the $\text{Rab5}$ fragment with $\text{pAcGFP1-C1}$ produced the $\text{acGFP-Rab5}$ fusion construct (5367 bp) driven by the CMV promoter (Figure~\ref{fig:diseno}H). Both final constructs were independently generated and validated using SnapGene's history tracking tool.
+
+
+\begin{thebibliography}{9}
+
+    \bibitem{snapgene} SnapGene Software, \url{https://www.snapgene.com}.
+    \bibitem{addgene} Addgene Repository, \url{https://www.addgene.org}.
+    \bibitem{vib} VIB Bioinformatics Core, \emph{SnapGene Exercise Guide}, \url{https://wiki.bits.vib.be/index.php/SnapGene#Exercise}. 
+   
+\end{thebibliography}
+
+\end{document}
