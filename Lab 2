@@ -1,0 +1,138 @@
+\documentclass[11pt, letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{float}
+\usepackage[super]{cite}
+\usepackage[font=footnotesize, labelfont=bf]{caption}
+
+
+\title{BIOL 502 Laboratory Report}
+\author{Hernandez, Leslie; Nguyen, Melissa; Rabinovich, Juan}
+\date{Fall, 2026}
+
+
+\begin{document}
+\maketitle
+\begin {center}
+    \textbf{Lab Instructor: Israel Hernández}\\
+    \textbf{Lab Day: Monday}
+\end{center}
+\vspace{0.1em}
+\begin{center}
+    \textbf{California State University, Channel Islands}
+\end{center}
+\vspace{1em}
+
+
+\section*{Methods}
+
+\subsection*{Plasmid Loading and Sequence Retrieval}
+Annotated vector sequences for $\text{pcDNA4/TO}$ (target expression vector) and $\text{pAcGFP1-C1}$ (fluorescent tagging vector) were imported from the SnapGene resource library \cite{snapgene}. The donor template containing the $\text{Rab5}$ gene ($\text{mRFP-Rab5}$) was obtained from Addgene and opened in SnapGene to review open reading frames (ORFs) and structural features \cite{addgene}.
+
+
+\subsection*{Primer Design and In Silico PCR Simulation}
+Custom primers were designed to amplify the $\text{Rab5}$ gene from the template. The forward primer incorporated at a $\text{BspEI}$ restriction site at the $5^{\prime}$ end starting at the initial leucine position to maintain proper reading frame alignment with $\text{AcGFP1}$ \cite{vib}. The reverse primer was mapped adjacent to the stop codon utilizing a downstream restriction site $\text{BamHI}$ \cite{vib}. Primer melting temperatures ($T_m$) were calculated within the $58.4\text{--}68.9^{\circ}\text{C}$ range using SnapGene's built-in thermodynamic calculator \cite{vib}. Polymerase chain reaction (PCR) and agarose gel electrophoresis were simulated, successfully verifying the expected 711 bp product.
+
+
+\subsection*{Restriction Cloning and Recombinant Assembly}
+Restriction digests were simulated on the amplified $\text{Rab5}$ fragment and on both vector backbones using $\text{BspEI}$ and $\text{BamHI}$ restriction enzymes \cite{vib}. In parallel, the $\text{Rab5}$ insert was ligated into the multiple cloning site (MCS) of $\text{pAcGFP1-C1}$ to generate the $\text{AcGFP-Rab5}$ fusion construct, and independently into the MCS of $\text{pcDNA4/TO}$ to generate the untagged $\text{Rab5}$ construct, each under the control of its respective CMV promoter \cite{vib}. These two constructs represent separate cloning outcomes rather than sequential steps of a single pathway. Plasmid construction pathways were validated via SnapGene's built-in history tracking tool \cite{vib}.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Figure1 copia.pdf}
+    \caption{\textbf{\textit{In silico} experimental design for the cloning of Rab5 and its fusion with AcGFP1.} (a) Map of the empty pcDNA4/TO vector (5078 bp), showing the CMV promoter, tet operators, multiple cloning site (MCS), and the ampicillin (AmpR) and zeocin (BleoR) resistance markers. (b) Map of the empty pAcGFP1-C1 vector (4731 bp), carrying the AcGFP1 reporter gene under the CMV promoter. (c) Map of the mRFP-Rab5 donor plasmid (5319 bp), used as template for amplification of the Rab5 gene. (d) Linear map of the Rab5 amplicon (711 bp), showing the primer landing sites and the flanking BspEI and BamHI restriction sites. (e) Detail of the forward primer (PrimerRab5fw), showing the incorporated BspEI site and the translation of the Rab5 N-terminus. (f) Detail of the reverse primer (rab5rev), showing the incorporated BamHI site, the stop codon, and the translation of the Rab5 C-terminus. (g) Map of the pcDNA4TO-Rab5 construct (5733 bp), resulting from cloning of the untagged Rab5 gene into the MCS of pcDNA4/TO. (h) Map of the acGFP-Rab5 construct (5367 bp), resulting from the fusion of Rab5 with AcGFP1 in the MCS of pAcGFP1-C1. Both final constructs (g, h) were generated and validated independently using SnapGene's built-in history tracking tool.}
+\begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{Figure1 copia.pdf}
+        \caption{Enter Caption}
+        \label{fig:placeholder}
+    \end{figure}
+        \label{fig:diseno}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{FIGURE2.pdf}
+\end{figure}
+
+\clearpage
+
+\noindent\captionof{figure}{\textbf{Figure 2: Transformation, Quantification, and Inducible Gene Expression of pGLO in E.coli}  (a) Non-selective control (-Amp/-pGLO): Thick healthy lawn of bacterial growth covering the agar plate. (b) The agar plate contains no growth, proving that the ampicillin antibiotic was active and killed all bacteria that did not contain the resistance gene. (c) The bacteria successfully took up the pGLO plasmid, bacterial colonies were formed on the ampicillin antibiotic. pBAD promoter was not activated due to lack of arabinose, resulting in no bacterial colonies present under UV light. (d) A box plot shows the DNA concentration (ng/µL) with the median concentration of 1.1 ng/µL. The range is approximately (-0.2 ng/µL to 2.7 ng/µL). (e) The box plot shows a median of 2.0 which demonstrates ideal removal of salt contaminants and organic solvents. (f) A box plot shows a median ratio of -0.5 compared to the ideal nucleic acid purity with the reference line of 1.8. (g) To view purified DNA obtained an electrophoresis in 1\% agarose gel was conducted. Two molecular weight ladders were used: Thermo Scientific™ GeneRuler™ 1 kb DNA Ladder SM0311 (containing fragments of 10000, 8000, 6000, 5000, 4000, 3500, 3000, 2500, 2000, 1500, 1000, 750, 500, 250) \cite{gel-reference} and and Promega G210A 100 bp ladder (fragments of 1500, 1000, 900, 800, 700, 600, 500, 400, 300, 200 and 100 bp)\cite{dna-ladder-reference}. (H\&I) Migration distance was obtained using the ImageJ system. Measurements between band and wells were obtained taking five measurements per band. Data was exported in CSV format and interpreted on google sheet software for model fitness testing.}
+\label{fig:figure2}
+
+
+
+
+\subsection*{Bacterial Cell Preparation and Induction}
+Competent E. coli DH5 alpha cells were transformed with the recombinant plasmids $\text{pGLO}$ The plasmids were heat shocked at 42 C° for 45 seconds and held in SOC medium at 37 C° for a one hour recovery. The  three lineages were plated on lysogeny broth agar plates under three conditions. 1. Non selective control (-Arabinose/+Antibiotic), 2. Uninduced selective control (-Arabinose/+Antibiotic), 3. Induced selective plate (+Arabinose/+Antibiotic). Plates were incubated for 16 hours at 37 C°. Colony growth and GFP expression was observed using UV light (Figure 2A). Single GFP-expressing colonies were selected and grown in liquid culture to obtain sufficient biomass for DNA extraction.
+
+\subsection*{Plasmid DNA Isolation}
+To obtain DNA from transformed colonies PureLink TM  HiPure Plasmid DNA Purification Kits midiprep procedure was followed.\cite{Plasmid DNA MiniPrep Kit}
+
+\subsection*{DNA Quantification}
+Plasmid DNA harvest with miniprep of pGLO plasmid was quantified by the course instructor using a NanoDrop microvolume spectrophotometer. Absorbances were measured at 230 nm, 260 nm, 280 nm, and 360 nm. The resulting DNA concentration (ng/µL), A260/230, and A260/280 purity ratios were provided to the class for analysis. 
+
+\subsection*{Gel Electrophoresis}
+The extracted DNA was observed by conducting a gel electrophoresis using a 1\%  agarose gel. The DNA within the gel was visualized using BioRad's UView.\cite{loading dye}
+
+\section*{Results}
+
+\subsection*{Initial Plasmid Mapping and Vector Verification}
+
+In silico screening successfully mapped and verified the baseline configurations of the working vectors and templates (Figure~\ref{fig:diseno}). Analysis of the empty $\text{pcDNA4/TO}$ expression vector (5078 bp) confirmed the presence of the CMV promoter, tet operators, multiple cloning site (MCS), and resistance markers (Figure~\ref{fig:diseno}A). The $\text{pAcGFP1-C1}$ reporter plasmid (4731 bp) was mapped, establishing the baseline framework carrying the $\text{AcGFP1}$ gene under CMV control (Figure~\ref{fig:diseno}B). Additionally, the mRFP-Rab5 donor plasmid (5319 bp) was successfully loaded from Addgene to serve as the template source for the $\text{Rab5}$ gene (Figure~\ref{fig:diseno}C).
+
+
+\subsection*{In Silico PCR Amplification and Primer Binding}
+
+Polymerase chain reaction (PCR) simulation successfully amplified the target $\text{Rab5}$ sequence, yielding the expected 711 bp linear amplicon flanked by the designed restriction sites (Figure~\ref{fig:diseno}D). Sequence inspection verified that the forward primer ($\text{PrimerRab5fw}$) correctly incorporated the $\text{BspEI}$ restriction site at the $5^{\prime}$ start site while maintaining the correct reading frame for the N-terminus (Figure~\ref{fig:diseno}E). Similarly, the reverse primer ($\text{PrimerRab5rev}$) successfully incorporated the downstream $\text{BamHI}$ site adjacent to the stop codon for C-terminal alignment (Figure~\ref{fig:diseno}F).
+
+
+\subsection*{Recombinant Construct Assembly and Verification}
+
+Restriction cloning workflows successfully generated and validated the final expression constructs (Figure~\ref{fig:diseno}). Insertion of the untagged $\text{Rab5}$ gene into the MCS of $\text{pcDNA4/TO}$ yielded the final $\text{pcDNA4TO-Rab5}$ recombinant plasmid (5733 bp) (Figure~\ref{fig:diseno}G). Concurrently, restriction digest and ligation of the $\text{Rab5}$ fragment with $\text{pAcGFP1-C1}$ produced the $\text{acGFP-Rab5}$ fusion construct (5367 bp) driven by the CMV promoter (Figure~\ref{fig:diseno}H). Both final constructs were independently generated and validated using SnapGene's history tracking tool.
+
+\subsection*{Bacterial Growth and GFP Induction}
+
+Following the transformation and plating of E.coli cultures with the pGLO plasmid on various media, bacterial growth and fluorescence were evaluated to confirm plasmid uptake and gene regulation. On the non-selective control plate (LB/-pGLO), a dense lawn of bacterial growth was observed under UV light, confirming the viability of the starting cultures (Figure 2A). Antibiotic effectiveness was confirmed by an unpictured selective negative control (LB+Amp/-pGLO) that was evaluated to have no bacteria growth, confirming that ampicillin was active and successfully killed all untransformed E.coli. Additionally, in a unpictured LB agar supplemented with ampicillin and arabinose (LB+Amp+Ara), transformed cells demonstrated dense colony growth among the streak lines and intense green fluorescence under UV illumination. This phenotype confirms both successful plasmid uptake (conferring ampicillin resistance via the bla gene) and arabinose-induced expression of green fluorescent protein under the pBAD promoter.
+On the uninducible selective control plates (LB+Amp/-Arabinose/+pGLO), bacterial colonies grew successfully confirming that the cells that incorporated the pGLO plasmid and expressed the ampicillin resistance gene. However, these colonies under UV light did not fluoresce because the pBAD promoter remained inactive in the absence of arabinose (Figure 2B). On the induced selective plate containing both ampicillin and arabinose (LB+Amp+Arabinose/+pGLO), the resulting colonies both grew and fluoresced brightly under UV light. (Figure 2C). This confirmed the successful arabinose-mediated activation of the pBAD promoter and subsequent expression of GFP.
+
+\subsection*{Plasmid DNA Extraction and Spectrophotometric Analysis}
+Plasmid DNA concentrations across all analyzed samples were below the standard lower detection threshold (2.0 ng/µL) for microvolume spectrophotometers, ranging from 0.68 ng/µL to 2.73 ng/µL (Figure 2D). The lower limit of reliable quantification for dsDNA on standard Nanodrop instruments is typically around 2.0 ng/µL \cite{nanodrop-reference}. For chemical and salt purity, the target A260/A230 range is 2.0-2.2.  All samples displayed low A260/A230 ratios between 0.29-0.93, with a class median of 0.48 (Figure 2E). These low ratio values indicate background UV absorption at 230nm, reflecting co-purified salts or organic solvent from the extraction buffers. The target value of protein purity (A280/A260) is 1.8 for pure dsDNA (Figure 2F). Sample 1 (1.79) and sample 5 (1.89) aligned closely with the ideal DNA purity. Elevated rations were observed in samples 2 (2.25) and sample 3 (2.17), whereas sample 6 exhibits a low ratio of 1.17, indicative of residual protein or other possible UV-absorbing contaminants.
+
+\subsection*{Agarose Gel Electrophoresis Verification}
+ No DNA extracted in the protocol was detected in the agarose gel. This might be attributable to human error or poor centripetal force applied due to equipment constraints. 
+
+\subsection*{Plasmid Fitness Analysis}
+For the agarose gel picture processed in ImageJ.JS \cite{imageJ}, a model of fitness for the two employed ladders was obtained. For 1kb ladder, bands interpreted were those between 250 pb and 3000 pb due to resolution of image (Figure 2G). For these chain weights the model that best describes migrated distance ($x$) against molecular weight (MW) with an $R^2=0.977$ was the polynomial model:
+\[
+\text{MW}=0.0879x^2-62.5 x +11410 \quad (\text{Figure 2H)}
+\]
+For the 100~bp ladder, the model that best describes the relationship between migrated distance and molecular weight with an $R^2 = 0.987$ was also polynomial:
+\[
+\text{MW} = 0.0529 x^2 - 42.7 x + 8546 \quad (\text{Figure 2I})
+\]
+
+
+
+
+\begin{thebibliography}{9}
+
+    \bibitem{snapgene} SnapGene Software, \url{https://www.snapgene.com}.
+    \bibitem{addgene} Addgene Repository, \url{https://www.addgene.org}.
+    \bibitem{vib} VIB Bioinformatics Core, \emph{SnapGene Exercise Guide}, \url{https://wiki.bits.vib.be/index.php/SnapGene#Exercise}. 
+    \bibitem{Plasmid DNA MiniPrep Kit} Thermo Fisher Scientific. (2015). PureLink™ HiPure Plasmid DNA MiniPrep Kit User Guide (Pub. No. MAN0000486). \url{https://www.thermofisher.com/order/catalog/product/K210002} 
+    \bibitem{loading dye} Bio-Rad. UView™ 6x Loading Dye, 1ml \#1665112, \url{https://www.bio-rad.com/en-us/sku/1665112-uview-6x-loading-dye-br-1-ml?ID=1665112} 
+    \bibitem{nanodrop-reference} Thermo Scientific NanoDrop 2000/2000c V1.0 User Manual, \url{https://documents.thermofisher.com/TFS-Assets/CAD/manuals/NanoDrop-2000-User-Manual-EN.pdf}
+    \bibitem{gel-reference} GeneRuler 1kb DNA Ladder User Guide (Pub. No. MAN0013004), \url{https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0013004_GeneRuler_1kb_DNALadder_250ug_UG.pdf}
+    
+    \bibitem{dna-ladder-reference} Promega Corporation. (n.d.). 100bp DNA Ladder (Cat. No. G2101), \url{https://www.promega.com/products/cloning-and-dna-markers/dna-ladder-rna-ladder/100bp-dna-ladder/?tabset0=0}
+    \bibitem{imageJ} ImageJ.JS Software, \url{https://ij.imjoy.io/}
+
+
+   
+\end{thebibliography}
+
+\end{document}
